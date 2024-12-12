@@ -17,4 +17,3 @@ exports.updateRecentWebtoon = (req, res) => {
         res.json('Recent webtoon saved');
     });
 };
-

@@ -5,7 +5,7 @@ exports.getWebtoonsByGenre = (req, res) => {
     const genre = req.body.genre;
 
     const query = `
-        SELECT title, thumbnail_link 
+        SELECT title, Thumb
         FROM webtoons 
         WHERE keywords LIKE ?
     `;

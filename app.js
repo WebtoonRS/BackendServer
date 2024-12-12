@@ -2,9 +2,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const authRoutes = require('./routes/authRoutes');
-const recent_logRoutes = require('./routes/recent_logRoutes');
-const user_nameRoutes = require('./routes/user_nameRoutes');
-const findWebtoonsByKeyword = require('./routes/findKeywordRoutes');
+const recommendRoutes = require('./routes/recommendRoutes');
+const webtoonRoutes = require('./routes/webtoonRoutes');
+// const recent_logRoutes = require('./routes/recent_logRoutes');
+// const user_nameRoutes = require('./routes/user_nameRoutes');
+// const findWebtoonsByKeyword = require('./routes/findKeywordRoutes');
 const randomwebtoon = require('./routes/randomRoutes')
 
 const app = express();
@@ -12,11 +14,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api/auth', authRoutes);
-app.use('/api/log', recent_logRoutes);
-app.use('/api/user', user_nameRoutes); 
-app.use('/api/keyword', findWebtoonsByKeyword);
-app.use('/api/recommend', randomwebtoon);
-
+// app.use('/api/log', recent_logRoutes);
+// app.use('/api/user', user_nameRoutes); 
+// app.use('/api/keyword', findWebtoonsByKeyword);
+app.use('/api/recommend', recommendRoutes);
+app.use('/api/webtoons', webtoonRoutes);
+app.use('/api/random', randomwebtoon);
 
 const port = 3000;
 app.listen(port, () => {

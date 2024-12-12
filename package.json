@@ -1,7 +1,6 @@
 {
   "name": "webtoon_project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,10 +8,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "axios": "^1.6.7",
     "body-parser": "^1.20.2",
     "crypto": "^1.0.1",
+    "csv-parser": "^3.0.0",
     "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
     "mysql": "^2.18.1",
+    "mysql2": "^3.11.4",
+    "nodemon": "^3.1.7",
+    "python-shell": "^5.0.0",
     "uuid": "^10.0.0"
-  }
+  },
+  "description": ""
 }

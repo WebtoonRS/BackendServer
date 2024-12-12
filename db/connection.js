@@ -4,8 +4,8 @@ const mysql = require('mysql');
 const con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '< MySQL password >',
-    database: 'my_db'
+    password: 'sookmyung2024',
+    database: 'webtoon_db'
 });
 
 con.connect(err => {
